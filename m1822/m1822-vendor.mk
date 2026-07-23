@@ -160,15 +160,11 @@ PRODUCT_COPY_FILES += \
     vendor/meizu/m1822/proprietary/vendor/bin/cnd:$(TARGET_COPY_OUT_VENDOR)/bin/cnd \
     vendor/meizu/m1822/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/meizu/m1822/proprietary/vendor/bin/dspservice:$(TARGET_COPY_OUT_VENDOR)/bin/dspservice \
-    vendor/meizu/m1822/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822 \
-    vendor/meizu/m1822/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822.rc \
     vendor/meizu/m1822/proprietary/vendor/lib/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fingerprint@1.0.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fingerprint@1.0.so \
-    vendor/meizu/m1822/proprietary/vendor/lib64/hw/gf_fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gf_fingerprint.default.so \
-    vendor/meizu/m1822/proprietary/vendor/lib64/hw/swfingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/swfingerprint.default.so \
+    vendor/meizu/m1822/proprietary/vendor/lib64/hw/fingerprint.goodix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.so \
+    vendor/meizu/m1822/proprietary/vendor/lib64/hw/fingerprint.sunwave.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.sunwave.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/hw/fp_hw_acc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fp_hw_acc.default.so \
-    vendor/meizu/m1822/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0.so \
-    vendor/meizu/m1822/proprietary/vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so \
     vendor/meizu/m1822/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/meizu/m1822/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/meizu/m1822/proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.4-service.widevine \
@@ -2090,7 +2086,6 @@ PRODUCT_COPY_FILES += \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgeofencing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgeofencing.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgnss.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnss.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnsspps.so \
-    vendor/meizu/m1822/proprietary/vendor/lib64/libgoodixfingerprintd_binder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgoodixfingerprintd_binder.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgps.utils.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/meizu/m1822/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
@@ -2288,9 +2283,32 @@ PRODUCT_COPY_FILES += \
     vendor/meizu/m1822/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql \
     vendor/meizu/m1822/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql \
     vendor/meizu/m1822/proprietary/vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/8_version_update_ecc_table.sql \
-    vendor/meizu/m1822/proprietary/vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/9_version_update_ecc_table.sql
+    vendor/meizu/m1822/proprietary/vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/9_version_update_ecc_table.sql \
+    vendor/meizu/m1822/proprietary/vendor/bin/qrtr-cfg:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-cfg \
+    vendor/meizu/m1822/proprietary/vendor/bin/qrtr-lookup:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-lookup \
+    vendor/meizu/m1822/proprietary/vendor/bin/qrtr-ns:$(TARGET_COPY_OUT_VENDOR)/bin/qrtr-ns \
+    vendor/meizu/m1822/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
+    vendor/meizu/m1822/proprietary/vendor/lib/hw/camera.msm8953.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.msm8953.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libarcsoft_makeup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_makeup.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libcam.common.meizu.platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam.common.meizu.platform.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libcam.common.meizu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcam.common.meizu.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libfilter_effects.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfilter_effects.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libhal_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhal_dbg.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libmakeup_style.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmakeup_style.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libmeizucamera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmeizucamera.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libphoto_timestamp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libphoto_timestamp.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libvfb_render.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvfb_render.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/libvmp_render.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvmp_render.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/vendor.qti.hardware.camera.device@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.device@1.0_vendor.so \
+    vendor/meizu/m1822/proprietary/vendor/lib/vendor.qti.hardware.meizu.camera.device@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.meizu.camera.device@1.0_vendor.so \
+    vendor/meizu/m1822/proprietary/vendor/lib64/vendor.qti.data.factory@2.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.3.so \
+    vendor/meizu/m1822/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so \
+    vendor/meizu/m1822/proprietary/vendor/lib64/vendor.qti.hardware.meizu.camera.device@1.0_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.meizu.camera.device@1.0_vendor.so
 
 PRODUCT_PACKAGES += \
+    qti-telephony-common \
+    imssettings \
+    IWlanService \
     libsdm-disp-vndapis \
     libthermalclient \
     libts_detected_face_hal \
