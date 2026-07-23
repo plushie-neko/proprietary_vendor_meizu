@@ -364,3 +364,22 @@ cc_prebuilt_library_shared {
 	prefer: true,
 	soc_specific: true,
 }
+
+cc_prebuilt_binary {
+	name: "android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822",
+	owner: "meizu",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
+	soc_specific: true,
+	init_rc: ["proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822.rc"],
+}

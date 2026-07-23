@@ -2334,4 +2334,5 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     libmmlib2d_interface \
-    libqomx_core
+    libqomx_core \
+    android.hardware.biometrics.fingerprint@2.1-service.meizu_m1822
