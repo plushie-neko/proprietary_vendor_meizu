@@ -140,7 +140,7 @@ LensInfo : Information of the lens present in the module.
     <EepromName>s5k5e9</EepromName>
     <ChromatixName>s5k5e9_qtech_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
-    <Position>BACK_AUX</Position>
+    <Position>BACK</Position>
     <MountAngle>90</MountAngle>
     <CSIInfo>
       <CSIDCore>1</CSIDCore>
@@ -163,7 +163,7 @@ LensInfo : Information of the lens present in the module.
     <EepromName>s5k5e9</EepromName>
     <ChromatixName>s5k5e9_ofilm_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
-    <Position>BACK_AUX</Position>
+    <Position>BACK</Position>
     <MountAngle>90</MountAngle>
     <CSIInfo>
       <CSIDCore>1</CSIDCore>
