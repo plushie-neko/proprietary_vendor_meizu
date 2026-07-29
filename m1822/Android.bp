@@ -267,3 +267,14 @@ cc_prebuilt_binary {
 	prefer: true,
 }
 
+
+android_app_import {
+	name: "IWlanService",
+	owner: "meizu",
+	apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
